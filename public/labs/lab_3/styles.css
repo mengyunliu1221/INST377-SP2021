@@ -1,2 +1,28 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
+ * {
+  margin: 0;
+  padding: 0
+}
+
+.carousel {
+  position: relative;
+  width: 700px;
+  height: 400px;
+}
+
+#arrow {
+  display: block;
+  margin-top: 100px;
+  justify-content: center;
+}
+#left,
+#right {
+  align-self: center;
+  background: #ddd;
+  color: #444;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 20px;      
+}
