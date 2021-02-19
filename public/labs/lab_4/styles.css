@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 10px;
+  
+}
+body{
+    width: 70%;
+    min-width: 800px;
+    margin: 0 auto;
+    background-color: #FFB6C1;
+}
+
+h1{
+    font-family: 'Londrina Solid', cursive;
+    color: #FFFFF0;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 300;
+  }
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 125px;
+  max-width: 225px;
+}
+ 
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 225px;
+}
+.flex-outer li button {
+    margin-left: auto;
+    padding: 5px 15px;
+    border: none;
+    background: #A9A9A9;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 5px;
+  }
+  .flex-inner li {
+    width: 75px;
+  }
+
+  .flex-inner {
+    justify-content: space-between;
+  }
