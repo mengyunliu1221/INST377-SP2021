@@ -28,11 +28,12 @@ const data=await request.json();
 
 form.addEventListener('submit', async(event) => {
   event.preventDefault();
-  console.log('form submitted');
+  console.log('submit fired', search.value);
   const filtered = data.filter((record) => record.zip.includes(search.value) && record.geocoded_column_1);
-  console.table(filtered);
+  const topFive = filtered.slice(0,5);
+  console.table(topFive);
 
-  filtered.forEach((item)=>{
+    topFive.forEach((item)=>{
     const longLat= item.geocoded_column_1.coordinates;
     console.log('markerLongLat', longLat[0], longLat[1]);
     const marker = L.marker([longLat[1], longLat[0]]).addTo(mapObjectFromFunction);
@@ -43,6 +44,10 @@ form.addEventListener('submit', async(event) => {
     appendItem.innerHTML= `<div class="list-header is-size-5">${item.name}</div><address class="is-size-6">${item.address_line_1}</address>`;
     targetList.append(appendItem);
   });
+
+  const {coordinates} = topFive[0]?.geocoded_column_1;
+  console.log('viewSet coords', coordinates);
+  mapObjectFromFunction.panTo([coordinates[1],coordinates[0]], 0);
 });
 }
 
