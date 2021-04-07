@@ -2,62 +2,52 @@
  https://javascript.info/introduction-browser-events */
 body {
   padding: 10px;
+  background-color: #5391d8;
 }
 
 .carousel {
   position: relative;
-  width: 398px;
-  padding: 10px 40px;
-  border: 1px solid #CCC;
-  border-radius: 15px;
-  background: rgb(79, 129, 33);
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.carousel img {
-  width: 130px;
-  height: 130px;
-  display: block;
-}
 
-#left,
-#right {
+#left{
+  left: 7px;
   position: absolute;
   top: 60px;
   padding: 0;
-  background: #ddd;
+  display: block;
+  justify-content: center;
   border-radius: 15px;
   border: 1px solid gray;
-  font-size: 24px;
-  line-height: 24px;
-  color: #444;
-  display: block;
+  font-size: 25px;
+  line-height: 25px;
 }
-
-.prev {
-  left: 7px;
-}
-
-.next {
+#right {
   right: 7px;
+  position: absolute;
+  top: 60px;
+  padding: 0;
+  display: block;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 25px;
+  line-height: 25px;
 }
-
-.gallery {
+.con {
   width: 390px;
   overflow: hidden;
 }
-
-.gallery ul {
+.con ul {
   height: 130px;
-  width: 9999px;
+  width: 99999px;
   margin: 0;
   padding: 0;
   list-style: none;
   transition: margin-left 250ms;
-  /* remove white-space between inline-block'ed li */
-  /* http://davidwalsh.name/remove-whitespace-inline-block */
   font-size: 0;
-}
-
-.gallery li {
-  display: inline-block;
 }
